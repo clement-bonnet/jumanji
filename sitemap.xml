@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://instadeep.github.io/jumanji/api/env/</loc>
+         <lastmod>2023-03-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://instadeep.github.io/jumanji/api/types/</loc>
          <lastmod>2023-03-21</lastmod>
          <changefreq>daily</changefreq>
