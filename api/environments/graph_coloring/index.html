@@ -12,21 +12,21 @@
         <meta name="author" content="InstaDeep Research">
       
       
-        <link rel="canonical" href="https://instadeep.github.io/jumanji/environments/tsp/">
+        <link rel="canonical" href="https://instadeep.github.io/jumanji/api/environments/graph_coloring/">
       
-      <link rel="icon" href="../../img/instadeep_logo.png">
+      <link rel="icon" href="../../../img/instadeep_logo.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.7">
     
     
       
-        <title>TSP - Jumanji</title>
+        <title>Graph coloring - Jumanji</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.9d5733d3.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9d5733d3.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -41,15 +41,15 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../_static/custom.css">
+      <link rel="stylesheet" href="../../../_static/custom.css">
     
-      <link rel="stylesheet" href="../../css/ansi-colours.css">
+      <link rel="stylesheet" href="../../../css/ansi-colours.css">
     
-      <link rel="stylesheet" href="../../css/pandas-dataframe.css">
+      <link rel="stylesheet" href="../../../css/pandas-dataframe.css">
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#traveling-salesman-problem-tsp-environment" class="md-skip">
+        <a href="#jumanji.environments.logic.graph_coloring.env.GraphColoring" class="md-skip">
           Skip to content
         </a>
       
@@ -93,9 +93,9 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Jumanji" class="md-header__button md-logo" aria-label="Jumanji" data-md-component="logo">
+    <a href="../../.." title="Jumanji" class="md-header__button md-logo" aria-label="Jumanji" data-md-component="logo">
       
-  <img src="../../img/instadeep_logo.png" alt="logo">
+  <img src="../../../img/instadeep_logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TSP
+              Graph coloring
             
           </span>
         </div>
@@ -208,7 +208,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -216,8 +216,6 @@
       
         
   
-  
-    
   
 
 
@@ -230,7 +228,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../rubiks_cube/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../environments/rubiks_cube/" class="md-tabs__link">
         Environments
       </a>
     </li>
@@ -248,7 +246,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../guides/advanced_usage/" class="md-tabs__link">
+      <a href="../../../guides/advanced_usage/" class="md-tabs__link">
         User Guides
       </a>
     </li>
@@ -269,7 +267,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../api/env/" class="md-tabs__link">
+      <a href="../../env/" class="md-tabs__link">
         API Reference
       </a>
     </li>
@@ -307,9 +305,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Jumanji" class="md-nav__button md-logo" aria-label="Jumanji" data-md-component="logo">
+    <a href="../../.." title="Jumanji" class="md-nav__button md-logo" aria-label="Jumanji" data-md-component="logo">
       
-  <img src="../../img/instadeep_logo.png" alt="logo">
+  <img src="../../../img/instadeep_logo.png" alt="logo">
 
     </a>
     Jumanji
@@ -337,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -350,14 +348,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -424,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rubiks_cube/" class="md-nav__link">
+      <a href="../../../environments/rubiks_cube/" class="md-nav__link">
         RubiksCube
       </a>
     </li>
@@ -438,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minesweeper/" class="md-nav__link">
+      <a href="../../../environments/minesweeper/" class="md-nav__link">
         Minesweeper
       </a>
     </li>
@@ -452,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../game_2048/" class="md-nav__link">
+      <a href="../../../environments/game_2048/" class="md-nav__link">
         Game2048
       </a>
     </li>
@@ -509,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bin_pack/" class="md-nav__link">
+      <a href="../../../environments/bin_pack/" class="md-nav__link">
         BinPack
       </a>
     </li>
@@ -523,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../knapsack/" class="md-nav__link">
+      <a href="../../../environments/knapsack/" class="md-nav__link">
         Knapsack
       </a>
     </li>
@@ -537,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../job_shop/" class="md-nav__link">
+      <a href="../../../environments/job_shop/" class="md-nav__link">
         JobShop
       </a>
     </li>
@@ -556,16 +552,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
       
       
@@ -602,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cleaner/" class="md-nav__link">
+      <a href="../../../environments/cleaner/" class="md-nav__link">
         Cleaner
       </a>
     </li>
@@ -616,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../connector/" class="md-nav__link">
+      <a href="../../../environments/connector/" class="md-nav__link">
         Connector
       </a>
     </li>
@@ -630,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cvrp/" class="md-nav__link">
+      <a href="../../../environments/cvrp/" class="md-nav__link">
         CVRP
       </a>
     </li>
@@ -644,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../maze/" class="md-nav__link">
+      <a href="../../../environments/maze/" class="md-nav__link">
         Maze
       </a>
     </li>
@@ -658,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../snake/" class="md-nav__link">
+      <a href="../../../environments/snake/" class="md-nav__link">
         Snake
       </a>
     </li>
@@ -670,73 +664,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          TSP
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../environments/tsp/" class="md-nav__link">
         TSP
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#observation" class="md-nav__link">
-    Observation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
-    Action
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reward" class="md-nav__link">
-    Reward
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#registered-versions" class="md-nav__link">
-    Registered Versions 📖
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -799,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/advanced_usage/" class="md-nav__link">
+      <a href="../../../guides/advanced_usage/" class="md-nav__link">
         Advanced Usage
       </a>
     </li>
@@ -813,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/registration/" class="md-nav__link">
+      <a href="../../../guides/registration/" class="md-nav__link">
         Registration
       </a>
     </li>
@@ -827,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/training/" class="md-nav__link">
+      <a href="../../../guides/training/" class="md-nav__link">
         Training
       </a>
     </li>
@@ -841,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/wrappers/" class="md-nav__link">
+      <a href="../../../guides/wrappers/" class="md-nav__link">
         Wrapper
       </a>
     </li>
@@ -935,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/env/" class="md-nav__link">
+      <a href="../../env/" class="md-nav__link">
         Base
       </a>
     </li>
@@ -983,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/environments/rubiks_cube/" class="md-nav__link">
+      <a href="../rubiks_cube/" class="md-nav__link">
         RubiksCube
       </a>
     </li>
@@ -997,7 +929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/environments/minesweeper/" class="md-nav__link">
+      <a href="../minesweeper/" class="md-nav__link">
         Minesweeper
       </a>
     </li>
@@ -1011,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/environments/game_2048/" class="md-nav__link">
+      <a href="../game_2048/" class="md-nav__link">
         Game2048
       </a>
     </li>
@@ -1066,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/environments/bin_pack/" class="md-nav__link">
+      <a href="../bin_pack/" class="md-nav__link">
         BinPack
       </a>
     </li>
@@ -1080,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/environments/knapsack/" class="md-nav__link">
+      <a href="../knapsack/" class="md-nav__link">
         Knapsack
       </a>
     </li>
@@ -1094,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/environments/job_shop/" class="md-nav__link">
+      <a href="../job_shop/" class="md-nav__link">
         JobShop
       </a>
     </li>
@@ -1155,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/environments/cleaner/" class="md-nav__link">
+      <a href="../cleaner/" class="md-nav__link">
         Cleaner
       </a>
     </li>
@@ -1169,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/environments/connector/" class="md-nav__link">
+      <a href="../connector/" class="md-nav__link">
         Connector
       </a>
     </li>
@@ -1183,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/environments/cvrp/" class="md-nav__link">
+      <a href="../cvrp/" class="md-nav__link">
         CVRP
       </a>
     </li>
@@ -1197,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/environments/maze/" class="md-nav__link">
+      <a href="../maze/" class="md-nav__link">
         Maze
       </a>
     </li>
@@ -1211,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/environments/snake/" class="md-nav__link">
+      <a href="../snake/" class="md-nav__link">
         Snake
       </a>
     </li>
@@ -1225,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/environments/tsp/" class="md-nav__link">
+      <a href="../tsp/" class="md-nav__link">
         TSP
       </a>
     </li>
@@ -1246,7 +1178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/wrappers/" class="md-nav__link">
+      <a href="../../wrappers/" class="md-nav__link">
         Wrappers
       </a>
     </li>
@@ -1260,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/types/" class="md-nav__link">
+      <a href="../../types/" class="md-nav__link">
         Types
       </a>
     </li>
@@ -1293,72 +1225,346 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/instadeepai/jumanji/edit/develop/docs/environments/tsp.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/instadeepai/jumanji/edit/develop/docs/api/environments/graph_coloring.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="traveling-salesman-problem-tsp-environment">Traveling Salesman Problem (TSP) Environment<a class="headerlink" href="#traveling-salesman-problem-tsp-environment" title="Permanent link">#</a></h1>
-<p align="center">
-        <img src="../../env_anim/tsp.gif" width="500"/>
-</p>
+  <h1>Graph coloring</h1>
 
-<p>We provide here a Jax JIT-able implementation of the <a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">traveling salesman
-problem (TSP)</a>.</p>
-<p>TSP is a well-known combinatorial optimization problem. Given a set of
-cities and the distances between them, the goal is to determine the
-shortest route that visits each city exactly once and finishes in the
-starting city. The problem is NP-complete, thus there is no known algorithm
-both correct and fast (i.e., that runs in polynomial time) for any instance
-of the problem.</p>
-<p>When the environment is reset, a new problem instance is generated by
-sampling coordinates (a pair for each city) from a uniform distribution
-between 0 and 1. The number of cities is a parameter of the environment.
-A trajectory terminates when no new cities can be visited or the last
-action was invalid (i.e., the agent attempted to revisit a city).</p>
-<h2 id="observation">Observation<a class="headerlink" href="#observation" title="Permanent link">#</a></h2>
-<p>The observation given to the agent provides information on the problem layout, the visited/unvisited
-cities and the current position (city) of the agent.</p>
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="jumanji.environments.logic.graph_coloring.env.GraphColoring" class="doc doc-heading">
+        <code>
+GraphColoring            (<a class="autorefs autorefs-internal" title="jumanji.env.Environment" href="../../env/#jumanji.env.Environment">Environment</a>)
+        </code>
+
+
+
+<a href="#jumanji.environments.logic.graph_coloring.env.GraphColoring" class="headerlink" title="Permanent link">#</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>Environment for the GraphColoring problem.
+The problem is a combinatorial optimization task where the goal is
+  to assign a color to each vertex of a graph
+  in such a way that no two adjacent vertices share the same color.
+The problem is usually formulated as minimizing the number of colors used.</p>
 <ul>
 <li>
-<p><code>coordinates</code>: jax array (float) of shape <code>(num_cities, 2)</code>, array of coordinates of each city.</p>
-</li>
-<li>
-<p><code>position</code>: jax array (int32) of shape <code>()</code>, identifier (index) of the last visited city.</p>
-</li>
-<li>
-<p><code>trajectory</code>: jax array (int32) of shape <code>(num_cities,)</code>, city indices defining the route
-(<code>-1</code> --&gt; not filled yet).</p>
-</li>
-<li>
-<p><code>action_mask</code>: jax array (bool) of shape <code>(num_cities,)</code>, binary values denoting whether a city
-can be visited.</p>
-</li>
-</ul>
-<h2 id="action">Action<a class="headerlink" href="#action" title="Permanent link">#</a></h2>
-<p>The action space is a <code>DiscreteArray</code> of integer values in the range of <code>[0, num_cities-1]</code>. An
-action is the index of the next city to visit.</p>
-<h2 id="reward">Reward<a class="headerlink" href="#reward" title="Permanent link">#</a></h2>
-<p>The reward could be either:</p>
+<p>observation: <code>Observation</code></p>
 <ul>
-<li>
-<p><strong>Dense</strong>: the negative distance between the current city and the chosen next city to go to.
-    It is 0 for the first chosen city, and for the last city, it also includes the distance
-    to the initial city to complete the tour.</p>
-</li>
-<li>
-<p><strong>Sparse</strong>: the negative tour length at the end of the episode. The tour length is defined
-    as the sum of the distances between consecutive cities. It is computed by starting at
-    the first city and ending there, after visiting all the cities.</p>
-</li>
+<li>adj_matrix: jax array (bool) of shape (num_nodes, num_nodes),
+    representing the adjacency matrix of the graph.</li>
+<li>colors: jax array (int32) of shape (num_nodes,),
+    representing the current color assignments for the vertices.</li>
+<li>action_mask: jax array (bool) of shape (num_colors,),
+    indicating which actions are valid in the current state of the environment.</li>
+<li>current_node_index: integer representing the current node being colored.</li>
 </ul>
-<p>In both cases, the reward is a large negative penalty of <code>-num_cities * sqrt(2)</code> if
-the action is invalid, i.e. a previously selected city is selected again.</p>
-<h2 id="registered-versions">Registered Versions 📖<a class="headerlink" href="#registered-versions" title="Permanent link">#</a></h2>
+</li>
+<li>
+<p>action: int, the color to be assigned to the current node (0 to num_nodes - 1)</p>
+</li>
+<li>
+<p>reward: float, a sparse reward is provided at the end of the episode.
+    Equals the negative of the number of unique colors used to color all vertices in the graph.
+    If an invalid action is taken, the reward is the negative of the total number of colors.</p>
+</li>
+<li>
+<p>episode termination:</p>
 <ul>
-<li><code>TSP-v1</code>: TSP problem with 20 randomly generated cities and a dense reward function.</li>
+<li>if all nodes have been assigned a color or if an invalid action is taken.</li>
 </ul>
+</li>
+<li>
+<p>state: <code>State</code></p>
+<ul>
+<li>adj_matrix: jax array (bool) of shape (num_nodes, num_nodes),
+    representing the adjacency matrix of the graph.</li>
+<li>colors: jax array (int32) of shape (num_nodes,),
+    color assigned to each node, -1 if not assigned.</li>
+<li>current_node_index: jax array (int) with shape (),
+    index of the current node.</li>
+<li>action_mask: jax array (bool) of shape (num_colors,),
+    indicating which actions are valid in the current state of the environment.</li>
+<li>key: jax array (uint32) of shape (2,),
+    random key used to generate random numbers at each step and for auto-reset.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">jumanji.environments</span> <span class="kn">import</span> <span class="n">GraphColoring</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">GraphColoring</span><span class="p">()</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">key</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">state</span><span class="p">,</span> <span class="n">timestep</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">)(</span><span class="n">key</span><span class="p">)</span>
+<span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="n">action</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_spec</span><span class="p">()</span><span class="o">.</span><span class="n">generate_value</span><span class="p">()</span>
+<span class="n">state</span><span class="p">,</span> <span class="n">timestep</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">)(</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span>
+<span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="jumanji.environments.logic.graph_coloring.env.GraphColoring.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">jumanji</span><span class="o">.</span><span class="n">environments</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">graph_coloring</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">Generator</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">viewer</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">jumanji</span><span class="o">.</span><span class="n">viewer</span><span class="o">.</span><span class="n">Viewer</span><span class="p">[</span><span class="n">jumanji</span><span class="o">.</span><span class="n">environments</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">graph_coloring</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">State</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#jumanji.environments.logic.graph_coloring.env.GraphColoring.__init__" class="headerlink" title="Permanent link">#</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Instantiate a <code>GraphColoring</code> environment.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>generator</code></td>
+        <td><code>Optional[jumanji.environments.logic.graph_coloring.generator.Generator]</code></td>
+        <td><p>callable to instantiate environment instances.
+Defaults to <code>RandomGenerator</code> which generates graphs with
+20 <code>num_nodes</code> and <code>edge_probability</code> equal to 0.8.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>viewer</code></td>
+        <td><code>Optional[jumanji.viewer.Viewer[jumanji.environments.logic.graph_coloring.types.State]]</code></td>
+        <td><p>environment viewer for rendering.
+Defaults to <code>GraphColoringViewer</code>.</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="jumanji.environments.logic.graph_coloring.env.GraphColoring.reset" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="n">PRNGKeyArray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">jumanji</span><span class="o">.</span><span class="n">environments</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">graph_coloring</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">State</span><span class="p">,</span> <span class="n">jumanji</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">TimeStep</span><span class="p">[</span><span class="n">jumanji</span><span class="o">.</span><span class="n">environments</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">graph_coloring</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">Observation</span><span class="p">]]</span></code>
+
+
+<a href="#jumanji.environments.logic.graph_coloring.env.GraphColoring.reset" class="headerlink" title="Permanent link">#</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Resets the environment to an initial state.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tuple[jumanji.environments.logic.graph_coloring.types.State, jumanji.types.TimeStep[jumanji.environments.logic.graph_coloring.types.Observation]]</code></td>
+      <td><p>The initial state and timestep.</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="jumanji.environments.logic.graph_coloring.env.GraphColoring.step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">State</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">Array</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">jumanji</span><span class="o">.</span><span class="n">environments</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">graph_coloring</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">State</span><span class="p">,</span> <span class="n">jumanji</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">TimeStep</span><span class="p">[</span><span class="n">jumanji</span><span class="o">.</span><span class="n">environments</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">graph_coloring</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">Observation</span><span class="p">]]</span></code>
+
+
+<a href="#jumanji.environments.logic.graph_coloring.env.GraphColoring.step" class="headerlink" title="Permanent link">#</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Updates the environment state after the agent takes an action.</p>
+<p>Specifically, this function allows the agent to choose
+a color for the current node (based on the action taken)
+in a graph coloring problem.
+It then updates the state of the environment based on
+the color chosen and calculates the reward based on
+the validity of the action and the completion of the coloring task.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>state</code></td>
+        <td><code>State</code></td>
+        <td><p>the current state of the environment.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>action</code></td>
+        <td><code>Array</code></td>
+        <td><p>the action taken by the agent.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>state</code></td>
+      <td><p>the new state of the environment.
+timestep: the next timestep.</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="jumanji.environments.logic.graph_coloring.env.GraphColoring.observation_spec" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">observation_spec</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">jumanji</span><span class="o">.</span><span class="n">specs</span><span class="o">.</span><span class="n">Spec</span><span class="p">[</span><span class="n">jumanji</span><span class="o">.</span><span class="n">environments</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">graph_coloring</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">Observation</span><span class="p">]</span></code>
+
+
+<a href="#jumanji.environments.logic.graph_coloring.env.GraphColoring.observation_spec" class="headerlink" title="Permanent link">#</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Returns the observation spec.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Spec for the `Observation` whose fields are</code></td>
+      <td><ul>
+<li>adj_matrix: BoundedArray (bool) of shape (num_nodes, num_nodes).
+    Represents the adjacency matrix of the graph.</li>
+<li>action_mask: BoundedArray (bool) of shape (num_nodes,).
+    Represents the valid actions in the current state.</li>
+<li>colors: BoundedArray (int32) of shape (num_nodes,).
+    Represents the colors assigned to each node.</li>
+<li>current_node_index: BoundedArray (int32) of shape ().
+    Represents the index of the current node.</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="jumanji.environments.logic.graph_coloring.env.GraphColoring.action_spec" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">action_spec</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DiscreteArray</span></code>
+
+
+<a href="#jumanji.environments.logic.graph_coloring.env.GraphColoring.action_spec" class="headerlink" title="Permanent link">#</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Specification of the action for the <code>GraphColoring</code> environment.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>action_spec</code></td>
+      <td><p>specs.DiscreteArray object</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
 
   <hr>
 <div class="md-source-file">
@@ -1384,41 +1590,6 @@ the action is invalid, i.e. a previously selected city is selected again.</p>
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../snake/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Snake" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Snake
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../guides/advanced_usage/" class="md-footer__link md-footer__link--next" aria-label="Next: Advanced Usage" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Advanced Usage
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -1443,10 +1614,10 @@ the action is invalid, i.e. a previously selected city is selected again.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "toc.integrate", "toc.follow", "content.code.annotate", "navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.5e67fbfe.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "toc.integrate", "toc.follow", "content.code.annotate", "navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.5e67fbfe.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e87a5f81.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e87a5f81.min.js"></script>
       
     
   </body>

@@ -12,14 +12,14 @@
         <meta name="author" content="InstaDeep Research">
       
       
-        <link rel="canonical" href="https://instadeep.github.io/jumanji/environments/tsp/">
+        <link rel="canonical" href="https://instadeep.github.io/jumanji/environments/sudoku/">
       
       <link rel="icon" href="../../img/instadeep_logo.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.7">
     
     
       
-        <title>TSP - Jumanji</title>
+        <title>Sudoku Environment - Jumanji</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#traveling-salesman-problem-tsp-environment" class="md-skip">
+        <a href="#sudoku-environment" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TSP
+              Sudoku Environment
             
           </span>
         </div>
@@ -217,8 +217,6 @@
         
   
   
-    
-  
 
 
   
@@ -230,7 +228,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../rubiks_cube/" class="md-tabs__link md-tabs__link--active">
+      <a href="../rubiks_cube/" class="md-tabs__link">
         Environments
       </a>
     </li>
@@ -350,14 +348,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -556,16 +552,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
       
       
@@ -670,73 +664,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          TSP
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../tsp/" class="md-nav__link">
         TSP
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#observation" class="md-nav__link">
-    Observation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
-    Action
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reward" class="md-nav__link">
-    Reward
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#registered-versions" class="md-nav__link">
-    Registered Versions 📖
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1293,72 +1225,52 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/instadeepai/jumanji/edit/develop/docs/environments/tsp.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/instadeepai/jumanji/edit/develop/docs/environments/sudoku.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="traveling-salesman-problem-tsp-environment">Traveling Salesman Problem (TSP) Environment<a class="headerlink" href="#traveling-salesman-problem-tsp-environment" title="Permanent link">#</a></h1>
+<h1 id="sudoku-environment">Sudoku Environment<a class="headerlink" href="#sudoku-environment" title="Permanent link">#</a></h1>
 <p align="center">
-        <img src="../../env_anim/tsp.gif" width="500"/>
+        <img src="../../env_anim/sudoku.gif" width="500"/>
 </p>
 
-<p>We provide here a Jax JIT-able implementation of the <a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">traveling salesman
-problem (TSP)</a>.</p>
-<p>TSP is a well-known combinatorial optimization problem. Given a set of
-cities and the distances between them, the goal is to determine the
-shortest route that visits each city exactly once and finishes in the
-starting city. The problem is NP-complete, thus there is no known algorithm
-both correct and fast (i.e., that runs in polynomial time) for any instance
-of the problem.</p>
-<p>When the environment is reset, a new problem instance is generated by
-sampling coordinates (a pair for each city) from a uniform distribution
-between 0 and 1. The number of cities is a parameter of the environment.
-A trajectory terminates when no new cities can be visited or the last
-action was invalid (i.e., the agent attempted to revisit a city).</p>
+<p>We provide here a Jax JIT-able implementation of the
+<a href="https://en.wikipedia.org/wiki/Sudoku">Sudoku</a> puzzle game.</p>
 <h2 id="observation">Observation<a class="headerlink" href="#observation" title="Permanent link">#</a></h2>
-<p>The observation given to the agent provides information on the problem layout, the visited/unvisited
-cities and the current position (city) of the agent.</p>
+<p>The observation given to the agent consists of:</p>
 <ul>
-<li>
-<p><code>coordinates</code>: jax array (float) of shape <code>(num_cities, 2)</code>, array of coordinates of each city.</p>
-</li>
-<li>
-<p><code>position</code>: jax array (int32) of shape <code>()</code>, identifier (index) of the last visited city.</p>
-</li>
-<li>
-<p><code>trajectory</code>: jax array (int32) of shape <code>(num_cities,)</code>, city indices defining the route
-(<code>-1</code> --&gt; not filled yet).</p>
-</li>
-<li>
-<p><code>action_mask</code>: jax array (bool) of shape <code>(num_cities,)</code>, binary values denoting whether a city
-can be visited.</p>
-</li>
+<li><code>board</code>: jax array (int32) of shape (9,9):
+    empty cells are represented by -1, and filled cells are represented by 0-8.</li>
+<li><code>action_mask</code>: jax array (bool) of shape (9,9,9):
+    indicates which actions are valid.</li>
 </ul>
 <h2 id="action">Action<a class="headerlink" href="#action" title="Permanent link">#</a></h2>
-<p>The action space is a <code>DiscreteArray</code> of integer values in the range of <code>[0, num_cities-1]</code>. An
-action is the index of the next city to visit.</p>
+<p>The action space is a <code>MultiDiscreteArray</code> of integer values representing coordinates of the square
+to explore and the digits to write in the cell, e.g. <code>[3, 6, 8]</code> for writing the digit <code>9</code> in
+the cell located on the fourth row and seventh column.</p>
 <h2 id="reward">Reward<a class="headerlink" href="#reward" title="Permanent link">#</a></h2>
-<p>The reward could be either:</p>
-<ul>
-<li>
-<p><strong>Dense</strong>: the negative distance between the current city and the chosen next city to go to.
-    It is 0 for the first chosen city, and for the last city, it also includes the distance
-    to the initial city to complete the tour.</p>
-</li>
-<li>
-<p><strong>Sparse</strong>: the negative tour length at the end of the episode. The tour length is defined
-    as the sum of the distances between consecutive cities. It is computed by starting at
-    the first city and ending there, after visiting all the cities.</p>
-</li>
-</ul>
-<p>In both cases, the reward is a large negative penalty of <code>-num_cities * sqrt(2)</code> if
-the action is invalid, i.e. a previously selected city is selected again.</p>
+<p>The reward is <code>1</code> at the end of the episode if the board is correctly solved, and <code>0</code> in every
+other case.</p>
+<h2 id="termination">Termination<a class="headerlink" href="#termination" title="Permanent link">#</a></h2>
+<p>An episode terminates when there are no more legal actions available, this could happen if the
+board is solved or if the agent finds itself in a dead-end.</p>
 <h2 id="registered-versions">Registered Versions 📖<a class="headerlink" href="#registered-versions" title="Permanent link">#</a></h2>
 <ul>
-<li><code>TSP-v1</code>: TSP problem with 20 randomly generated cities and a dense reward function.</li>
+<li><code>Sudoku-v0</code>, the classic <a href="https://en.wikipedia.org/wiki/Sudoku">game</a> on
+a 9x9 grid, 10000 random puzzles with mixed difficulty are included by default.</li>
+<li><code>Sudoku-very-easy-v0</code>, the classic <a href="https://en.wikipedia.org/wiki/Sudoku">game</a> on
+a 9x9 grid, only 1000 very-easy random puzzles (&gt;46 clues) included by default.</li>
 </ul>
+<h2 id="using-custom-puzzle-instances">Using custom puzzle instances<a class="headerlink" href="#using-custom-puzzle-instances" title="Permanent link">#</a></h2>
+<p>If one wants to include its own database of puzzles, the <code>DatabaseGenerator</code> can be initialized with any collection of puzzles using the argument <code>custom_boards</code>.
+Some references for databases of puzzle of various difficulties:
+ - https://www.kaggle.com/datasets/rohanrao/sudoku
+ - https://www.kaggle.com/datasets/informoney/4-million-sudoku-puzzles-easytohard</p>
+<h2 id="difficulty-level-as-a-function-of-number-of-clues">Difficulty level as a function of number of clues<a class="headerlink" href="#difficulty-level-as-a-function-of-number-of-clues" title="Permanent link">#</a></h2>
+<p><a href="https://www.researchgate.net/figure/Number-of-clues-for-each-difficulty-level_tbl1_259525699"><img width=400 src="https://www.researchgate.net/profile/Arnab-Maji-2/publication/259525699/figure/tbl1/AS:651874038460436@1532430290710/Number-of-clues-for-each-difficulty-level.png" alt="Number of clues for each difficulty level"/></a>
+Adapted from <a href="https://www.researchgate.net/figure/Number-of-clues-for-each-difficulty-level_tbl1_259525699">An Algorithm for Generating only Desired Permutations for Solving Sudoku Puzzle</a>.</p>
 
   <hr>
 <div class="md-source-file">
@@ -1383,41 +1295,6 @@ the action is invalid, i.e. a previously selected city is selected again.</p>
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../snake/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Snake" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Snake
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../guides/advanced_usage/" class="md-footer__link md-footer__link--next" aria-label="Next: Advanced Usage" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Advanced Usage
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

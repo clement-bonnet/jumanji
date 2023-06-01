@@ -12,14 +12,14 @@
         <meta name="author" content="InstaDeep Research">
       
       
-        <link rel="canonical" href="https://instadeep.github.io/jumanji/environments/tsp/">
+        <link rel="canonical" href="https://instadeep.github.io/jumanji/environments/robot_warehouse/">
       
       <link rel="icon" href="../../img/instadeep_logo.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.7">
     
     
       
-        <title>TSP - Jumanji</title>
+        <title>RobotWarehouse Environment - Jumanji</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#traveling-salesman-problem-tsp-environment" class="md-skip">
+        <a href="#robotwarehouse-environment" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TSP
+              RobotWarehouse Environment
             
           </span>
         </div>
@@ -217,8 +217,6 @@
         
   
   
-    
-  
 
 
   
@@ -230,7 +228,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../rubiks_cube/" class="md-tabs__link md-tabs__link--active">
+      <a href="../rubiks_cube/" class="md-tabs__link">
         Environments
       </a>
     </li>
@@ -350,14 +348,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -556,16 +552,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
       
       
@@ -670,73 +664,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          TSP
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../tsp/" class="md-nav__link">
         TSP
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#observation" class="md-nav__link">
-    Observation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
-    Action
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reward" class="md-nav__link">
-    Reward
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#registered-versions" class="md-nav__link">
-    Registered Versions 📖
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1293,71 +1225,55 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/instadeepai/jumanji/edit/develop/docs/environments/tsp.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/instadeepai/jumanji/edit/develop/docs/environments/robot_warehouse.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="traveling-salesman-problem-tsp-environment">Traveling Salesman Problem (TSP) Environment<a class="headerlink" href="#traveling-salesman-problem-tsp-environment" title="Permanent link">#</a></h1>
+<h1 id="robotwarehouse-environment">RobotWarehouse Environment<a class="headerlink" href="#robotwarehouse-environment" title="Permanent link">#</a></h1>
 <p align="center">
-        <img src="../../env_anim/tsp.gif" width="500"/>
+        <img src="../../env_anim/robot_warehouse.gif" width="600"/>
 </p>
 
-<p>We provide here a Jax JIT-able implementation of the <a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">traveling salesman
-problem (TSP)</a>.</p>
-<p>TSP is a well-known combinatorial optimization problem. Given a set of
-cities and the distances between them, the goal is to determine the
-shortest route that visits each city exactly once and finishes in the
-starting city. The problem is NP-complete, thus there is no known algorithm
-both correct and fast (i.e., that runs in polynomial time) for any instance
-of the problem.</p>
-<p>When the environment is reset, a new problem instance is generated by
-sampling coordinates (a pair for each city) from a uniform distribution
-between 0 and 1. The number of cities is a parameter of the environment.
-A trajectory terminates when no new cities can be visited or the last
-action was invalid (i.e., the agent attempted to revisit a city).</p>
+<p>We provide a JAX jit-able implementation of the <a href="https://github.com/semitable/robotic-warehouse/tree/master">Robotic Warehouse</a>
+environment.</p>
+<p>The Robot Warehouse (RWARE) environment simulates a warehouse with robots moving and delivering requested goods. Real-world applications inspire the simulator, in which robots pick up shelves and deliver them to a workstation. Humans access the content of a shelf, and then robots can return them to empty shelf locations.</p>
+<p>The goal is to successfully deliver as many requested shelves in a given time budget.</p>
+<p>Once a shelf has been delivered, a new shelf is requested at random. Agents start each episode at random locations within the warehouse.</p>
 <h2 id="observation">Observation<a class="headerlink" href="#observation" title="Permanent link">#</a></h2>
-<p>The observation given to the agent provides information on the problem layout, the visited/unvisited
-cities and the current position (city) of the agent.</p>
+<p>The <strong>observation</strong> seen by the agent is a <code>NamedTuple</code> containing the following:</p>
 <ul>
 <li>
-<p><code>coordinates</code>: jax array (float) of shape <code>(num_cities, 2)</code>, array of coordinates of each city.</p>
+<p><code>agents_view</code>: jax array (int32) of shape <code>(num_agents, num_obs_features)</code>, array representing the agent's view of other agents
+    and shelves.</p>
 </li>
 <li>
-<p><code>position</code>: jax array (int32) of shape <code>()</code>, identifier (index) of the last visited city.</p>
+<p><code>action_mask</code>: jax array (bool) of shape <code>(num_agents, 5)</code>, array specifying, for each agent,
+    which action (noop, forward, left, right, toggle_load) is legal.</p>
 </li>
 <li>
-<p><code>trajectory</code>: jax array (int32) of shape <code>(num_cities,)</code>, city indices defining the route
-(<code>-1</code> --&gt; not filled yet).</p>
-</li>
-<li>
-<p><code>action_mask</code>: jax array (bool) of shape <code>(num_cities,)</code>, binary values denoting whether a city
-can be visited.</p>
+<p><code>step_count</code>: jax array (int32) of shape <code>()</code>, number of steps elapsed in the current episode.</p>
 </li>
 </ul>
 <h2 id="action">Action<a class="headerlink" href="#action" title="Permanent link">#</a></h2>
-<p>The action space is a <code>DiscreteArray</code> of integer values in the range of <code>[0, num_cities-1]</code>. An
-action is the index of the next city to visit.</p>
-<h2 id="reward">Reward<a class="headerlink" href="#reward" title="Permanent link">#</a></h2>
-<p>The reward could be either:</p>
+<p>The action space is a <code>MultiDiscreteArray</code> containing an integer value in <code>[0, 1, 2, 3, 4]</code> for each
+agent. Each agent can take one of five actions: noop (<code>0</code>), forward (<code>1</code>), turn left (<code>2</code>), turn right (<code>3</code>), or toggle_load (<code>4</code>).</p>
+<p>The episode terminates under the following conditions:</p>
 <ul>
 <li>
-<p><strong>Dense</strong>: the negative distance between the current city and the chosen next city to go to.
-    It is 0 for the first chosen city, and for the last city, it also includes the distance
-    to the initial city to complete the tour.</p>
+<p>An invalid action is taken, or</p>
 </li>
 <li>
-<p><strong>Sparse</strong>: the negative tour length at the end of the episode. The tour length is defined
-    as the sum of the distances between consecutive cities. It is computed by starting at
-    the first city and ending there, after visiting all the cities.</p>
+<p>An agent collides with another agent.</p>
 </li>
 </ul>
-<p>In both cases, the reward is a large negative penalty of <code>-num_cities * sqrt(2)</code> if
-the action is invalid, i.e. a previously selected city is selected again.</p>
+<h2 id="reward">Reward<a class="headerlink" href="#reward" title="Permanent link">#</a></h2>
+<p>The reward is global and shared among the agents. It is equal to the number of shelves which were
+delivered successfully during the time step (i.e., +1 for each shelf).</p>
 <h2 id="registered-versions">Registered Versions 📖<a class="headerlink" href="#registered-versions" title="Permanent link">#</a></h2>
 <ul>
-<li><code>TSP-v1</code>: TSP problem with 20 randomly generated cities and a dense reward function.</li>
+<li><code>RobotWarehouse-v0</code>, a warehouse with 4 agents each with a sensor range of 1, a warehouse floor with 2 shelf rows, 3 shelf columns, a column height of 8, and a shelf request queue of 8.</li>
 </ul>
 
   <hr>
@@ -1383,41 +1299,6 @@ the action is invalid, i.e. a previously selected city is selected again.</p>
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../snake/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Snake" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Snake
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../guides/advanced_usage/" class="md-footer__link md-footer__link--next" aria-label="Next: Advanced Usage" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Advanced Usage
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

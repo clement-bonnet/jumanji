@@ -12,14 +12,14 @@
         <meta name="author" content="InstaDeep Research">
       
       
-        <link rel="canonical" href="https://instadeep.github.io/jumanji/environments/tsp/">
+        <link rel="canonical" href="https://instadeep.github.io/jumanji/environments/graph_coloring/">
       
       <link rel="icon" href="../../img/instadeep_logo.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.7">
     
     
       
-        <title>TSP - Jumanji</title>
+        <title>Graph Coloring Environment - Jumanji</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#traveling-salesman-problem-tsp-environment" class="md-skip">
+        <a href="#graph-coloring-environment" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TSP
+              Graph Coloring Environment
             
           </span>
         </div>
@@ -217,8 +217,6 @@
         
   
   
-    
-  
 
 
   
@@ -230,7 +228,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../rubiks_cube/" class="md-tabs__link md-tabs__link--active">
+      <a href="../rubiks_cube/" class="md-tabs__link">
         Environments
       </a>
     </li>
@@ -350,14 +348,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -556,16 +552,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
       
       
@@ -670,73 +664,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          TSP
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../tsp/" class="md-nav__link">
         TSP
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#observation" class="md-nav__link">
-    Observation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
-    Action
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reward" class="md-nav__link">
-    Reward
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#registered-versions" class="md-nav__link">
-    Registered Versions 📖
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1293,71 +1225,74 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/instadeepai/jumanji/edit/develop/docs/environments/tsp.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/instadeepai/jumanji/edit/develop/docs/environments/graph_coloring.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="traveling-salesman-problem-tsp-environment">Traveling Salesman Problem (TSP) Environment<a class="headerlink" href="#traveling-salesman-problem-tsp-environment" title="Permanent link">#</a></h1>
+<h1 id="graph-coloring-environment">Graph Coloring Environment<a class="headerlink" href="#graph-coloring-environment" title="Permanent link">#</a></h1>
 <p align="center">
-        <img src="../../env_anim/tsp.gif" width="500"/>
+    <img src="../../env_img/graph_coloring.png" width="500"/>
 </p>
 
-<p>We provide here a Jax JIT-able implementation of the <a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">traveling salesman
-problem (TSP)</a>.</p>
-<p>TSP is a well-known combinatorial optimization problem. Given a set of
-cities and the distances between them, the goal is to determine the
-shortest route that visits each city exactly once and finishes in the
-starting city. The problem is NP-complete, thus there is no known algorithm
-both correct and fast (i.e., that runs in polynomial time) for any instance
-of the problem.</p>
-<p>When the environment is reset, a new problem instance is generated by
-sampling coordinates (a pair for each city) from a uniform distribution
-between 0 and 1. The number of cities is a parameter of the environment.
-A trajectory terminates when no new cities can be visited or the last
-action was invalid (i.e., the agent attempted to revisit a city).</p>
+<p>We provide here a Jax JIT-able implementation of the Graph Coloring environment.</p>
+<p>Graph coloring is a combinatorial optimization problem where the objective is to assign a color to each vertex of a graph in such a way that no two adjacent vertices share the same color. The problem is usually formulated as minimizing the number of colors used. The <code>GraphColoring</code> environment is an episodic, single-agent setting that allows for the exploration of graph coloring algorithms and reinforcement learning methods.</p>
 <h2 id="observation">Observation<a class="headerlink" href="#observation" title="Permanent link">#</a></h2>
-<p>The observation given to the agent provides information on the problem layout, the visited/unvisited
-cities and the current position (city) of the agent.</p>
+<p>The observation in the <code>GraphColoring</code> environment includes information about the graph, the colors assigned to the vertices, the action mask, and the current node index.</p>
 <ul>
+<li><code>graph</code>: jax array (bool) of shape <code>(num_nodes, num_nodes)</code>, representing the adjacency matrix of the graph.</li>
 <li>
-<p><code>coordinates</code>: jax array (float) of shape <code>(num_cities, 2)</code>, array of coordinates of each city.</p>
+<p>For example, a random observation of the graph adjacency matrix:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>```[[False,  True, False,  True],
+[ True, False,  True, False],
+[False,  True, False,  True],
+[ True, False,  True, False]]```
+</code></pre></div></td></tr></table></div>
 </li>
 <li>
-<p><code>position</code>: jax array (int32) of shape <code>()</code>, identifier (index) of the last visited city.</p>
+<p><code>colors</code>: a JAX array (int32) of shape <code>(num_nodes,)</code>, representing the current color assignments for the vertices. Initially, all elements are set to -1, indicating that no colors have been assigned yet.</p>
 </li>
 <li>
-<p><code>trajectory</code>: jax array (int32) of shape <code>(num_cities,)</code>, city indices defining the route
-(<code>-1</code> --&gt; not filled yet).</p>
+<p>For example, an initial color assignment:
+    <code>[-1, -1, -1, -1]</code></p>
 </li>
 <li>
-<p><code>action_mask</code>: jax array (bool) of shape <code>(num_cities,)</code>, binary values denoting whether a city
-can be visited.</p>
+<p><code>action_mask</code>: a JAX array of boolean values, shaped <code>(num_colors,)</code>, which indicates the valid actions in the current state of the environment. Each position in the array corresponds to a color. True at a position signifies that the corresponding color can be used to color a node, while False indicates the opposite.</p>
 </li>
+<li>
+<p>For example, for 4 number of colors available:
+    <code>[True, False, True, False]</code></p>
+</li>
+<li>
+<p><code>current_node_index</code>: an integer representing the current node being colored.</p>
+</li>
+<li>For example, an initial current_node_index might be 0.</li>
 </ul>
 <h2 id="action">Action<a class="headerlink" href="#action" title="Permanent link">#</a></h2>
-<p>The action space is a <code>DiscreteArray</code> of integer values in the range of <code>[0, num_cities-1]</code>. An
-action is the index of the next city to visit.</p>
+<p>The action space is a DiscreteArray of integer values in <code>[0, 1, ..., num_colors - 1]</code>. Each action corresponds to assigning a color to the current node.</p>
 <h2 id="reward">Reward<a class="headerlink" href="#reward" title="Permanent link">#</a></h2>
-<p>The reward could be either:</p>
+<p>The reward in the <code>GraphColoring</code> environment is given as follows:</p>
 <ul>
-<li>
-<p><strong>Dense</strong>: the negative distance between the current city and the chosen next city to go to.
-    It is 0 for the first chosen city, and for the last city, it also includes the distance
-    to the initial city to complete the tour.</p>
-</li>
-<li>
-<p><strong>Sparse</strong>: the negative tour length at the end of the episode. The tour length is defined
-    as the sum of the distances between consecutive cities. It is computed by starting at
-    the first city and ending there, after visiting all the cities.</p>
-</li>
+<li><code>sparse reward</code>: a reward is provided at the end of the episode and equals the negative of the number of unique colors used to color all vertices in the graph.</li>
 </ul>
-<p>In both cases, the reward is a large negative penalty of <code>-num_cities * sqrt(2)</code> if
-the action is invalid, i.e. a previously selected city is selected again.</p>
+<p>The agent's goal is to find a valid coloring using as few colors as possible while avoiding conflicts with adjacent nodes.</p>
+<h2 id="episode-termination">Episode Termination<a class="headerlink" href="#episode-termination" title="Permanent link">#</a></h2>
+<p>The goal of the agent is to find a valid coloring using as few colors as possible. An episode in the graph coloring environment can terminate under two conditions:</p>
+<ol>
+<li>
+<p>All nodes have been assigned a color: the environment iteratively assigns colors to nodes. When all nodes have a color assigned (i.e., there are no nodes with a color value of -1), the episode ends. This is the natural termination condition and ideally the one we'd like the agent to achieve.</p>
+</li>
+<li>
+<p>Invalid action is taken: an action is considered invalid if it tries to assign a color to a node that is not within the allowed color set for that node at that time. The allowed color set for each node is updated after every action. If an invalid action is attempted, the episode immediately terminates and the agent receives a large negative reward. This encourages the agent to learn valid actions and discourages it from making invalid actions.</p>
+</li>
+</ol>
 <h2 id="registered-versions">Registered Versions 📖<a class="headerlink" href="#registered-versions" title="Permanent link">#</a></h2>
 <ul>
-<li><code>TSP-v1</code>: TSP problem with 20 randomly generated cities and a dense reward function.</li>
+<li><code>GraphColoring-v0</code>: The default settings for the <code>GraphColoring</code> problem with a configurable number of nodes and edge_probability. The default number of nodes is 20, and the default edge probability is 0.8.</li>
 </ul>
 
   <hr>
@@ -1383,41 +1318,6 @@ the action is invalid, i.e. a previously selected city is selected again.</p>
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../snake/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Snake" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Snake
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../guides/advanced_usage/" class="md-footer__link md-footer__link--next" aria-label="Next: Advanced Usage" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Advanced Usage
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
