@@ -12,14 +12,14 @@
         <meta name="author" content="InstaDeep Research">
       
       
-        <link rel="canonical" href="https://instadeep.github.io/jumanji/environments/game_2048/">
+        <link rel="canonical" href="https://instadeep.github.io/jumanji/environments/multi_cvrp/">
       
       <link rel="icon" href="../../img/instadeep_logo.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.7">
     
     
       
-        <title>Game2048 - Jumanji</title>
+        <title>Multi Agent Capacitated Vehicle Routing Problem - `MultiCVRP` Environment - Jumanji</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2048-environment" class="md-skip">
+        <a href="#multi-agent-capacitated-vehicle-routing-problem-multicvrp-environment" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Game2048
+              Multi Agent Capacitated Vehicle Routing Problem - `MultiCVRP` Environment
             
           </span>
         </div>
@@ -217,8 +217,6 @@
         
   
   
-    
-  
 
 
   
@@ -230,7 +228,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../rubiks_cube/" class="md-tabs__link md-tabs__link--active">
+      <a href="../rubiks_cube/" class="md-tabs__link">
         Environments
       </a>
     </li>
@@ -350,14 +348,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -386,16 +382,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
       
       
@@ -452,73 +446,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Game2048
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../game_2048/" class="md-nav__link">
         Game2048
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#observation" class="md-nav__link">
-    Observation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
-    Action
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reward" class="md-nav__link">
-    Reward
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#registered-versions" class="md-nav__link">
-    Registered Versions 📖
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1293,78 +1225,55 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/instadeepai/jumanji/edit/develop/docs/environments/game_2048.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/instadeepai/jumanji/edit/develop/docs/environments/multi_cvrp.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="2048-environment">2048 Environment<a class="headerlink" href="#2048-environment" title="Permanent link">#</a></h1>
+<h1 id="multi-agent-capacitated-vehicle-routing-problem-multicvrp-environment">Multi Agent Capacitated Vehicle Routing Problem - <code>MultiCVRP</code> Environment<a class="headerlink" href="#multi-agent-capacitated-vehicle-routing-problem-multicvrp-environment" title="Permanent link">#</a></h1>
 <p align="center">
-    <img src="../../env_anim/game_2048.gif" width="500"/>
+        <img src="../../env_anim/multi_cvrp.gif" width="500"/>
 </p>
 
-<p>We provide here a Jax JIT-able implementation of the game <a href="https://play2048.co/">2048</a>.</p>
-<p>2048 is a popular single-player puzzle game that is played on a 4x4 grid. The game board consists of
-cells, each containing a power of 2, and the objective is to reach a score of <em>at least</em> 2048 by
-merging cells together. The player can shift the entire grid in one of the four directions
-(up, down, right, left) to combine cells of the same value. When two adjacent cells have the same
-value, they merge into a single cell with a value equal to the sum of the two cells. The game ends
-when the player is no longer able to make any further moves. The ultimate goal is to achieve the
-highest-valued tile possible, with the hope of surpassing 2048. With each move, the player must
-carefully plan and strategize to reach the highest score possible.</p>
+<p>We provide here a Jax JIT-able implementation of the multi-agent capacitated vehicle routing problem
+(MultiCVRP) which is specified in <a href="https://arxiv.org/abs/2002.05513">MVRPSTW</a>.</p>
+<p>This environment introduces the problem of routing multiple agents in a coordinated manner, specifically in the context of collecting items from various locations. Each agent controls one vehicle. The problem, called the multi-agent capacitated vehicle routing problem (MultiCVRP), entails directing a group of agents to different locations on a map. They need to collectively go to each node and return items to the depot location. To make the problem a bit more realistic we consider the multi-vehicle routing problem with soft time windows (MVRPSTW). In this formulation, each location on the map also has a soft time window in which the items must be collected. If the items are collected outside this window a penalty is provided to the agents.</p>
+<p>A new problem instance is generated by resetting the environment. The problem instance contains
+coordinates for each node sampled from a uniform distribution inside the map boundries, and each node
+(except for depot) has a specific demand which is an integer value sampled from a uniform
+distribution between 1 and the maximum demand.
+The number of nodes with demand is a parameter of the environment.</p>
 <h2 id="observation">Observation<a class="headerlink" href="#observation" title="Permanent link">#</a></h2>
-<p>The observation in the game 2048 includes information about the board, the action mask, and the step
-count.</p>
+<p>Each agent receives information on the coordinates, demands, time windows and penalty coefficients of all the customer nodes. Futhermore the agents receive positions, local times and vehicle capacity information on all vehicles. Lastly an action mask is also provided to each agent.</p>
 <ul>
-<li>
-<p><code>board</code>: jax array (int32) of shape <code>(board_size, board_size)</code>, representing the current game
-    state. Each nonzero element in the array corresponds to a game tile and holds an exponent of 2.
-    The actual value of the tile is obtained by raising 2 to the power of said exponent.</p>
-<ul>
-<li>
-<p>Here is an example of a random observation of the game board:
-    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[[ 2 0 1 4]
- [ 5 3 0 2]
- [ 0 2 3 2]
- [ 1 2 0 0]]
-</code></pre></div></td></tr></table></div></p>
-</li>
-<li>
-<p>This array can be converted into the actual game board:
-    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[[  4 0 2 16]
- [ 32 8 0  4]
- [  0 4 8  4]
- [  2 4 0  0]]
-</code></pre></div></td></tr></table></div></p>
-</li>
-</ul>
-</li>
-<li>
-<p><code>action_mask</code>: jax array (bool) of shape <code>(4,)</code>, indicating which actions are valid in the current
-state of the environment. The actions include moving the tiles up, right, down, or left. For
-example, an action mask <code>[False, True, False, False]</code> means that the only valid action is to move
-the tiles rightward.</p>
-</li>
+<li><code>node_coordinates</code>: jax array (float32) of shape <code>(num_vehicles, num_customers + 1, 2)</code>, shows an array of the coordinates of each customer node
+and the depot node.</li>
+<li><code>node_demands</code>: jax array (int16) of shape <code>(num_vehicles, num_customers + 1,)</code>, shows an array of the demands of each city node
+(and depot node where the demand is set to 0).</li>
+<li><code>node_time_windows</code>: jax array (float32) of shape <code>(num_vehicles, num_customers + 1, 2)</code>, shows an array of the early and late time cutoffs for each customer.</li>
+<li><code>node_penalty_coefs</code>: jax array (float32) of shape <code>(num_vehicles, num_customers + 1, 2)</code>, shows the early and late penalty coefficients for arriving early or late at a customer's location.</li>
+<li><code>other_vehicles_position</code>: jax array (int16) of shape <code>(num_vehicles, num_vehicles - 1)</code>, shows the positions of all other vehicles.</li>
+<li><code>other_vehicles_local_times</code>: jax array (float32) of shape <code>(num_vehicles, num_vehicles - 1)</code>, shows the local times of all other vehicles.</li>
+<li><code>other_vehicles_capacities</code>: jax array (int16) of shape <code>(num_vehicles, num_vehicles - 1)</code>, shows the capacities of all other vehicles.</li>
+<li><code>vehicle_position</code>: jax array (int16) of shape <code>(num_vehicles)</code>, shows the positions of the vehicles controlled by the agents.</li>
+<li><code>vehicle_local_time</code>: jax array (float32) of shape <code>(num_vehicles)</code>, shows the local times of the vehicles controlled by the agents.</li>
+<li><code>vehicle_capacity</code>: jax array (int16) of shape <code>(num_vehicles)</code>, shows the capacity of the vehicles controlled by the agents.</li>
+<li><code>action_mask</code>: jax array (bool) of shape <code>(num_vehicles, num_customers + 1,)</code>, denoting which actions are possible (True) and
+which are not (False).</li>
 </ul>
 <h2 id="action">Action<a class="headerlink" href="#action" title="Permanent link">#</a></h2>
-<p>The action space is a <code>DiscreteArray</code> of integer values in <code>[0, 1, 2, 3]</code>. Specifically, these four
-actions correspond to: up (0), right (1), down (2), or left (3).</p>
+<p>Each agent's action space is a <code>BoundedArray</code> of integer values in the range of <code>[0, num_customers]</code>. An action is the index of the
+next node to visit, and an action value of 0 corresponds to visiting the depot.</p>
 <h2 id="reward">Reward<a class="headerlink" href="#reward" title="Permanent link">#</a></h2>
-<p>Taking an action in 2048 only returns a reward when two tiles of equal value are merged into a new
-tile containing their sum (i.e. twice each of their values). The cumulative reward in an episode is
-the sum of the values of all newly created tiles. For example, if a player merges two 512-value
-tiles to create a new 1024-value tile, and then merges two 256-value tiles to create a new 512-value
-tile, the total reward from these actions is 1536 (i.e., 1024 + 512).</p>
+<ul>
+<li><strong>Dense</strong>: The reward is equal to the sum of negative distances of the current location and next location of all the vehicles. Time penalities are added if the agents arrived early or late to specific customers. If the max step limit is reached, the episode ends with a large negative reward which is equal to the maximum negative distance reward that can be incurred.</li>
+<li><strong>Sparse</strong>: The reward is 0 at every step but the last, where the reward is
+the negative of the length of the path chosen by all the agents combined. Time penalities are added if the agents arrived early or late to specific customers. If the max step limit is reached, the episode ends with a large negative reward which is equal to the maximum negative distance reward that can be incurred.</li>
+</ul>
 <h2 id="registered-versions">Registered Versions 📖<a class="headerlink" href="#registered-versions" title="Permanent link">#</a></h2>
 <ul>
-<li><code>Game2048-v1</code>, the default settings for 2048 with a board of size 4x4.</li>
+<li><code>MultiCVRP-v0</code>: MultiCVRP problem with 20 customers (randomly generated), maximum capacity of 20, and maximum demand of 10 with two vehicles.</li>
 </ul>
 
   <hr>
@@ -1390,41 +1299,6 @@ tile, the total reward from these actions is 1536 (i.e., 1024 + 512).</p>
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../minesweeper/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Minesweeper" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Minesweeper
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../bin_pack/" class="md-footer__link md-footer__link--next" aria-label="Next: BinPack" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              BinPack
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

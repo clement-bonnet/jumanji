@@ -12,14 +12,14 @@
         <meta name="author" content="InstaDeep Research">
       
       
-        <link rel="canonical" href="https://instadeep.github.io/jumanji/environments/game_2048/">
+        <link rel="canonical" href="https://instadeep.github.io/jumanji/environments/mmst/">
       
       <link rel="icon" href="../../img/instadeep_logo.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.7">
     
     
       
-        <title>Game2048 - Jumanji</title>
+        <title>MMST Environment - Jumanji</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2048-environment" class="md-skip">
+        <a href="#mmst-environment" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Game2048
+              MMST Environment
             
           </span>
         </div>
@@ -217,8 +217,6 @@
         
   
   
-    
-  
 
 
   
@@ -230,7 +228,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../rubiks_cube/" class="md-tabs__link md-tabs__link--active">
+      <a href="../rubiks_cube/" class="md-tabs__link">
         Environments
       </a>
     </li>
@@ -350,14 +348,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -386,16 +382,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
       
       
@@ -452,73 +446,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Game2048
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../game_2048/" class="md-nav__link">
         Game2048
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#observation" class="md-nav__link">
-    Observation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
-    Action
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reward" class="md-nav__link">
-    Reward
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#registered-versions" class="md-nav__link">
-    Registered Versions 📖
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1293,78 +1225,87 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/instadeepai/jumanji/edit/develop/docs/environments/game_2048.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/instadeepai/jumanji/edit/develop/docs/environments/mmst.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="2048-environment">2048 Environment<a class="headerlink" href="#2048-environment" title="Permanent link">#</a></h1>
+<h1 id="mmst-environment">MMST Environment<a class="headerlink" href="#mmst-environment" title="Permanent link">#</a></h1>
 <p align="center">
-    <img src="../../env_anim/game_2048.gif" width="500"/>
+        <img src="../../env_anim/mmst.gif" width="600"/>
 </p>
 
-<p>We provide here a Jax JIT-able implementation of the game <a href="https://play2048.co/">2048</a>.</p>
-<p>2048 is a popular single-player puzzle game that is played on a 4x4 grid. The game board consists of
-cells, each containing a power of 2, and the objective is to reach a score of <em>at least</em> 2048 by
-merging cells together. The player can shift the entire grid in one of the four directions
-(up, down, right, left) to combine cells of the same value. When two adjacent cells have the same
-value, they merge into a single cell with a value equal to the sum of the two cells. The game ends
-when the player is no longer able to make any further moves. The ultimate goal is to achieve the
-highest-valued tile possible, with the hope of surpassing 2048. With each move, the player must
-carefully plan and strategize to reach the highest score possible.</p>
+<p>The multi minimum spanning tree (mmst) environment consists of a random connected graph
+with groups of nodes (same node types) that needs to be connected.
+The goal of the environment is to connect all nodes of the same type together
+without using the same utility nodes (nodes that do not belong to any group of nodes) in the shortest time possible.</p>
+<p>An episode ends when all group of nodes are connected or the maximum number of steps is reached.</p>
+<blockquote>
+<p>Note:</p>
+<p>This environment can be treated as a multi agent problem with each agent atempting to connect
+one group of node. In this implementation, we treat the problem as single agent that outputs
+multiple actions per nodes.</p>
+</blockquote>
 <h2 id="observation">Observation<a class="headerlink" href="#observation" title="Permanent link">#</a></h2>
-<p>The observation in the game 2048 includes information about the board, the action mask, and the step
-count.</p>
+<p>At each step observation contains 4 items: a node_types, an adjacency matrix for the graph,
+an action mask for each group of nodes (agent) and current node positon of each agent.</p>
 <ul>
 <li>
-<p><code>board</code>: jax array (int32) of shape <code>(board_size, board_size)</code>, representing the current game
-    state. Each nonzero element in the array corresponds to a game tile and holds an exponent of 2.
-    The actual value of the tile is obtained by raising 2 to the power of said exponent.</p>
-<ul>
-<li>
-<p>Here is an example of a random observation of the game board:
-    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[[ 2 0 1 4]
- [ 5 3 0 2]
- [ 0 2 3 2]
- [ 1 2 0 0]]
-</code></pre></div></td></tr></table></div></p>
+<p><code>node_types</code>: Array representing the types of nodes in the problem.
+        For example, if we have 12 nodes, their indices are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11.
+        Let's consider we have 2 agents. Agent 0 wants to connect nodes (0, 1, 9),
+        and agent 1 wants to connect nodes (3, 5, 8).
+        The remaining nodes are considered utility nodes.
+        Therefore, in the state view, the node_types are
+        represented as [0, 0, -1, 1, -1, 1, 0, -1, 1, 0, -1, -1].
+        When generating the problem, each agent starts from one of its nodes.
+        So, if agent 0 starts on node 1 and agent 1 on node 3,
+        the connected_nodes array will have values [1, -1, ...] and [3, -1, ...] respectively.
+        The agent's observation is represented using the following rules:
+        - Each agent should see its connected nodes on the path as 0.
+        - Nodes that the agent still needs to connect are represented as 1.
+        - The next agent's nodes are represented by 2 and 3, the next by 4 and 5, and so on.
+        - Utility unconnected nodes are represented by -1.
+        For the 12 node example mentioned above,
+        the expected observation view node_types will have the following values:
+        node_types = jnp.array(
+            [
+                [1, 0, -1, 2, -1, 3, 1, -1, 3, 1, -1, -1],
+                [3, 2, -1, 0, -1, 1, 3, -1, 1, 3, -1, -1],
+            ],
+            dtype=jnp.int32,
+        )
+        Note: to make the environment single agent, we use the first agent's observation.</p>
 </li>
 <li>
-<p>This array can be converted into the actual game board:
-    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[[  4 0 2 16]
- [ 32 8 0  4]
- [  0 4 8  4]
- [  2 4 0  0]]
-</code></pre></div></td></tr></table></div></p>
-</li>
-</ul>
+<p><code>adj_matrix</code>: Adjacency matrix representing the connections between nodes.</p>
 </li>
 <li>
-<p><code>action_mask</code>: jax array (bool) of shape <code>(4,)</code>, indicating which actions are valid in the current
-state of the environment. The actions include moving the tiles up, right, down, or left. For
-example, an action mask <code>[False, True, False, False]</code> means that the only valid action is to move
-the tiles rightward.</p>
+<p><code>positions</code>: Current node positions of the agents.
+        In our current problem, this will be represented as jnp.array([1, 3]).</p>
+</li>
+<li>
+<p><code>step_count</code>: integer to keep track of the number of steps.</p>
+</li>
+<li>
+<p><code>action_mask</code>: Binary mask indicating the validity of each action.
+        Given the current node on which the agent is located,
+        this mask determines if there is a valid edge to every other node.</p>
 </li>
 </ul>
 <h2 id="action">Action<a class="headerlink" href="#action" title="Permanent link">#</a></h2>
-<p>The action space is a <code>DiscreteArray</code> of integer values in <code>[0, 1, 2, 3]</code>. Specifically, these four
-actions correspond to: up (0), right (1), down (2), or left (3).</p>
+<p>The action space is a <code>MultiDiscreteArray</code> of shape <code>(num_agents,)</code> of integer values in the range
+of <code>[0, num_nodes-1]</code>. During every step, an agent picks the next node it wants to move to.
+An action is invalid if the agent picks a node it has no edge to or the node is a utility node already
+been used by another agent.</p>
 <h2 id="reward">Reward<a class="headerlink" href="#reward" title="Permanent link">#</a></h2>
-<p>Taking an action in 2048 only returns a reward when two tiles of equal value are merged into a new
-tile containing their sum (i.e. twice each of their values). The cumulative reward in an episode is
-the sum of the values of all newly created tiles. For example, if a player merges two 512-value
-tiles to create a new 1024-value tile, and then merges two 256-value tiles to create a new 512-value
-tile, the total reward from these actions is 1536 (i.e., 1024 + 512).</p>
+<p>An agent recieves a reward of 10.0 every step it gets a valid connection, a reward of -1.0 if it does not
+connect and an extra penalty of -1.0 if choses an invalid action.</p>
+<p>The total step reward is the sum of rewards per agent.</p>
 <h2 id="registered-versions">Registered Versions 📖<a class="headerlink" href="#registered-versions" title="Permanent link">#</a></h2>
 <ul>
-<li><code>Game2048-v1</code>, the default settings for 2048 with a board of size 4x4.</li>
+<li><code>MMST-v0</code>, 3 agents, 36 nodes, 72 edges, 4 nodes to connect per agent and step limit of 70.</li>
 </ul>
 
   <hr>
@@ -1390,41 +1331,6 @@ tile, the total reward from these actions is 1536 (i.e., 1024 + 512).</p>
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../minesweeper/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Minesweeper" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Minesweeper
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../bin_pack/" class="md-footer__link md-footer__link--next" aria-label="Next: BinPack" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              BinPack
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
