@@ -406,6 +406,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_1">
@@ -482,6 +484,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../environments/sliding_tile_puzzle/" class="md-nav__link">
+        SlidingTilePuzzle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../environments/sudoku/" class="md-nav__link">
         Sudoku
       </a>
@@ -521,6 +537,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_2">
@@ -543,6 +561,20 @@
     <li class="md-nav__item">
       <a href="../../../environments/bin_pack/" class="md-nav__link">
         BinPack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../environments/flat_pack/" class="md-nav__link">
+        FlatPack
       </a>
     </li>
   
@@ -613,6 +645,10 @@
       
       
       
+        
+          
+        
+          
         
           
         
@@ -766,6 +802,34 @@
     <li class="md-nav__item">
       <a href="../../../environments/tsp/" class="md-nav__link">
         TSP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../environments/sokoban/" class="md-nav__link">
+        Sokoban
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../environments/pac_man/" class="md-nav__link">
+        PacMan
       </a>
     </li>
   
@@ -1003,6 +1067,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_1_2">
@@ -1067,6 +1133,20 @@
     <li class="md-nav__item">
       <a href="../rubiks_cube/" class="md-nav__link">
         RubiksCube
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sliding_tile_puzzle/" class="md-nav__link">
+        SlidingTilePuzzle
       </a>
     </li>
   
@@ -1194,6 +1274,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_1_3">
@@ -1216,6 +1298,20 @@
     <li class="md-nav__item">
       <a href="../bin_pack/" class="md-nav__link">
         BinPack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flat_pack/" class="md-nav__link">
+        FlatPack
       </a>
     </li>
   
@@ -1284,6 +1380,10 @@
       
       
       
+        
+          
+        
+          
         
           
         
@@ -1443,6 +1543,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sokoban/" class="md-nav__link">
+        Sokoban
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pac_man/" class="md-nav__link">
+        PacMan
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1574,7 +1702,7 @@ Sudoku            (<a class="autorefs autorefs-internal" title="jumanji.env.Envi
 <span class="normal">7</span>
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">jumanji.environments</span> <span class="kn">import</span> <span class="n">Sudoku</span>
 <span class="n">env</span> <span class="o">=</span> <span class="n">Sudoku</span><span class="p">()</span>
-<span class="n">key</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">key</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">PRNGKey</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">state</span><span class="p">,</span> <span class="n">timestep</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">)(</span><span class="n">key</span><span class="p">)</span>
 <span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
 <span class="n">action</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_spec</span><span class="p">()</span><span class="o">.</span><span class="n">generate_value</span><span class="p">()</span>
@@ -1820,7 +1948,7 @@ the column index and the value to be placed in the cell.</p>
   <small>
     
       Last update:
-      2023-08-25
+      2024-03-14
     
   </small>
 </div>
@@ -1842,7 +1970,7 @@ the column index and the value to be placed in the cell.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../rubiks_cube/" class="md-footer__link md-footer__link--prev" aria-label="Previous: RubiksCube" rel="prev">
+        <a href="../sliding_tile_puzzle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SlidingTilePuzzle" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1851,7 +1979,7 @@ the column index and the value to be placed in the cell.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              RubiksCube
+              SlidingTilePuzzle
             </div>
           </div>
         </a>
